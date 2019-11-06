@@ -1,4 +1,4 @@
-/*
+ /*
   EXAMPLE TASK:
     - Write an Airplane constructor that initializes `name` from an argument.
     - All airplanes built with Airplane should initialize with an `isFlying` of false.
@@ -39,10 +39,26 @@ Airplane.prototype.land = function () {
         + It should return a string with `name` and `age`. Example: "Mary, 50"
 */
 
-function Person() {
+function Person(name, age) {
+this.name = name;
+this.age = age;
+this.stomach = [];
 
 }
 
+Person.prototype.eat = function(food) {
+
+if (this.stomach.length < 10) {
+this.stomach.push(food);
+ }
+} 
+Person.prototype.poop = function() {
+  this.stomach = [];
+}
+
+Person.prototype.toString = function () {
+  return this.name + ", " + this.age
+}
 /*
   TASK 2
     - Write a Car constructor that initializes `model` and `milesPerGallon` from arguments.
@@ -57,7 +73,12 @@ function Person() {
         + The `drive` method should return a string "I ran out of fuel at x miles!" x being `odometer`.
 */
 
-function Car() {
+function Car(model, milesPerGallon) {
+this.model = model;
+this.milesPerGallon = milesPerGallon;
+this.tank.odometer =[0];
+
+Car.prototype.
 
 }
 
